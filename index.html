@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/dist/output.css" rel="stylesheet">
+
+</head>
+<body>
+    <header class="flex justify-center mt-10">
+        <h1 class="text-red-800 text-lg md:text-5xl lg:text-8xl">Rock Paper Scissors!</h1>
+    </header>
+
+    <main>
+        <p class="flex justify-center text-6xl mt-1" id="result"></p> 
+        <div class="flex flex-auto justify-evenly mt-10">
+            <div class="flex flex-1 card lg:card-side max-w-3xl bg-base-100 shadow-xl">
+                <figure><img id="cpuPic" class="max-w-42 h-4/5" src="images/computer-lab-icon-2.png" alt="Album"/></figure>
+                <div class="card-body">
+                  <h2 class="card-title">CPU</h2>
+                  <div id="cpuPointMenu">
+                    <p>CPU points: </p>
+                    <p id="cpuPoints"></p>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="flex flex-1 card lg:card-side max-w-3xl bg-base-100 shadow-xl">
+                <figure><img id="playerPic" class="max-w-42"  src="images/player.png" alt="Album"/></figure>
+                <div class="card-body flex">
+                  <h2 class="card-title">Player</h2>
+                  <div id="playerPointMenu">
+                        <p>Player points: </p>
+                        <p id="playerPoints"></p>
+                  </div>
+                  <div class="card-actions justify-end flex flex-col justify-self-end" id="userchoices">
+                  </div>
+                </div>
+              </div>
+        </div>
+    </main>
+
+    <footer class="flex justify-center mt-20 gap-4">
+        <div class="flex gap-4" id="centralNav">
+            <select class="select w-full max-w-xs" id="pointMenu">
+                <option selected>1</option>
+                <option>3</option>
+                <option>5</option>
+                <option>7</option>
+                <option>9</option>
+                <option>11</option>
+              </select>
+
+              <button class="btn" id="startbtn">Start</button>
+        </div>
+    </footer>
+    <script type="module" src="game.js"></script>
+</body>
+</html>
